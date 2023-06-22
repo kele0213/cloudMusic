@@ -1,0 +1,77 @@
+Page {
+  background-color: rgb(105, 19, 48);
+}
+.newSongs {
+  height: 100vh;
+  margin-top: 100rpx;
+}
+
+.title {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title .titleInfo{
+  font-size: 70rpx;
+  font-weight: 700;
+  color: #fff;
+}
+
+.title .time {
+  margin-top:30rpx;
+  font-weight: 700;
+  color:papayawhip
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+.info .num {
+  padding: 0rpx 40rpx;
+  min-width: 40rpx;
+  text-align: center;
+}
+
+.content {
+  min-height: 70%;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+
+.content .all {
+  padding: 30rpx;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.content .iconfont{
+  color:#000;
+  font-size: 50rpx;
+  padding-left: 20rpx;
+}
+
+.info {
+  padding: 20rpx 0rpx;
+}
+
+.songInfo {
+  width: 100vw;
+}
+
+.songInfo .musicName{
+  font-size: 36rpx;
+  font-weight: 700;
+  width: 80%;
+}
+.songInfo .singer{
+  padding-top: 12rpx;
+  font-size: 24rpx;
+  width: 80%;
+}
+.btn {
+  position: absolute;
+  right: 40rpx;
+}

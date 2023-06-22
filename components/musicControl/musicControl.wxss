@@ -1,0 +1,50 @@
+
+@import "/static/iconfont/iconfont.wxss";
+
+
+.iconfont {
+  font-size: 60rpx;
+}
+
+.musicControl {
+  position: fixed;
+  height: 130rpx;
+  width: 100%;
+  bottom:0rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.musicName {
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+.singer{
+  padding-left: 20rpx;
+  padding-top:10rpx;
+  font-size: 24rpx;
+  color: #C0C4CC;
+}
+
+.musicControl image{
+  min-width: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 50rpx;
+  border-radius: 20rpx;
+}
+
+.musicControl .btn{
+  position: absolute;
+  right: 20rpx;
+  text-align: right;
+  padding-right: 50rpx;
+}
+
+.info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+}

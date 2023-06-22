@@ -1,0 +1,31 @@
+<view class="topList">
+<!-- 官方榜单 -->
+  <view class="authority">
+    <view class="title"><image src='/static/images/logo.png'></image>官方榜</view>
+    <view class="authorityItem" wx:for="{{authorityList}}" wx:key="id" bindtap="toList" data-id="{{item.id}}">
+      <view class="itemTitle">{{item.name}}</view>
+      <view class="itemInfo">
+        <view class="image">
+          <image class="one" src="{{item.tracks[0].al.picUrl}}" mode=""/>
+          <image class="two" src="{{item.tracks[1].al.picUrl}}" mode=""/>
+          <image class="three" src="{{item.tracks[2].al.picUrl}}" mode=""/>
+        </view>
+        <view class="musicInfo">
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="track" wx:key="id">
+            <view class="num">{{index+1}}</view>
+            <view class="musicName">{{track.name}}</view>
+            <view class="singer">{{track.ar[0].name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="allList">
+    <view class="title">所有榜单</view>
+    <view class="allListInfo">
+      <view class="allListItem" wx:for="{{topList}}" wx:key="id" bindtap="toList" data-id="{{item.id}}">
+        <image src="{{item.coverImgUrl}}" mode="widthFix"/>
+      </view>
+    </view>
+  </view>
+</view>

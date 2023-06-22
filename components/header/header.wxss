@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .title{
+  font-size: 38rpx;
+}
+.header .more{
+  font-size: 30rpx;
+  border: 1rpx solid #C0C4CC;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 50rpx;
+}

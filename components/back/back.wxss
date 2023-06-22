@@ -1,0 +1,19 @@
+@import "/static/iconfont/iconfont.wxss";
+
+.header {
+  position: fixed;
+  top:73rpx;
+  left:10rpx;
+  text-align: center;
+  width: 150rpx;
+  z-index: 10000;
+}
+
+.iconfont {
+  color: #fff;
+  font-size: 45rpx;
+}
+
+.black {
+  color: black;
+}

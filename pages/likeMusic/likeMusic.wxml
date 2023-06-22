@@ -1,0 +1,19 @@
+<view class="body">
+<view class="infoMusic">
+  <view class="header">
+    播放全部 <text class="iconfont icon-bofang" bindtap="bofangAll"></text>
+  </view>
+  <view class="content">
+    <view class="musicItem" wx:for="{{songList}}" wx:key="id" data-id="{{item.id}}" data-track="{{item}}" bindtap="toMusic">
+      <view class="num">{{index+1}}</view>
+      <view class="musicInfo">
+        <view class="musicName">{{item.name}}</view>
+      <view class="singer">{{item.ar[0].name}}</view>
+      </view>
+      <view class="btn">
+        <text class="iconfont icon-bofang"></text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

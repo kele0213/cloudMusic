@@ -1,0 +1,35 @@
+
+video {
+  width: 100vw;
+}
+
+.viedeo-swiper {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.info {
+  color: #fff;
+  position: absolute;
+  bottom: 40rpx;
+  padding: 10rpx;
+}
+
+.artists {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+

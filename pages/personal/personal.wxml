@@ -1,0 +1,29 @@
+<back></back>
+<view class="personal">
+  <view class="header">
+  <image src="/static/images/bg3.png" mode="widthFix"/>
+  </view>
+  <view class="userinfo">
+    <image class="touxiang" src="/static/images/personal/user-bg.jpg" bindtap="toLogin"/>
+    <view class="info">
+      <view class="nickName">{{userInfo?userInfo.nickname:"勇士，请先登录"}}</view>
+      <button class="edit" bindtap="edit">编辑资料</button>
+    </view>
+  </view>
+  <view class="content">
+    <view class="like" bindtap="toLike">
+      <image src="{{likeUrl?likeUrl:'/static/images/bg.png'}}"></image>
+      <view class="likeInfo">
+        <view class="title">我喜欢的音乐</view>
+        <view class="count">{{historyList?likeList.length:'0'}}首</view>
+      </view>
+    </view>
+    <view class="like" bindtap="toHistory">
+      <image src="{{historyUrl?historyUrl:'/static/images/bg.png'}}"></image>
+      <view class="likeInfo">
+        <view class="title">历史记录</view>
+        <view class="count">{{historyList?historyList.length:'0'}}首</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+<view class="songList">
+  <back></back>
+  <view class="header">
+    <view class="listTitle">
+      <image class="coverImg" src="{{songList.coverImgUrl}}" mode=""/>
+      <view class="listInfo">
+        <view class="listName">{{songList.name}}</view>
+        <view class="creator">
+          <image class="creatorImg" src="{{songList.creator.avatarUrl}}" mode=""/>
+          <view class="nickName">{{songList.creator.nickname}}</view>
+        </view>
+        <view class="playNum">播放次数:{{songList.playCount}}</view>
+      </view>
+    </view>
+    <!-- 描述 -->
+    <view class="description">
+      {{songList.description}}
+    </view>
+    <!-- 收藏 bookedCount 转发shareCount 评论commentCount -->
+    <view class="buttonList">
+      <view>
+      <text class="iconfont icon-Group-"></text>
+      {{songDetailInfo.shareCount}}
+      </view>
+      <view>
+      <text class="iconfont icon-pinglun"></text>
+      {{songDetailInfo.commentCount}}
+      </view>
+      <view>
+      <text class="iconfont icon-tianjia"></text>
+      {{songDetailInfo.bookedCount}}
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="title" bindtap="toMusicAll">播放全部 <text class="iconfont icon-bofang pdlf"></text></view>
+    <view class="musicItem" wx:for="{{songList.tracks}}" wx:for-item="track" data-track="{{track}}" data-id="{{track.id}}" bindtap="toMusic" wx:key="id"> 
+      <view class="num">{{index+1}}</view>
+      <view class="musicInfo">
+        <view class="musicName">{{track.name}}</view>
+        <view class="singer">{{track.ar[0].name}} - {{track.al.name}}</view>
+      </view>
+      <view class="btn iconfont icon-bofang"></view>
+    </view>
+  </view>
+  <musicControl></musicControl>
+</view>

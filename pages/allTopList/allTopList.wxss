@@ -1,0 +1,52 @@
+.allTopList{
+  height: 100vh;
+  width: 100vw;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.navItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  min-width: 25vw;
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: 700;
+}
+.bordercol {
+  border-bottom:3px solid #f00;
+}
+
+.content {
+  padding-left: 4%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.song {
+  padding-right: 3%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.song image{
+  width: 100%;
+}
+.song .title{
+  margin: 20rpx 0;
+  min-width: 100%;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 设置对齐模式 */
+  -webkit-box-orient:vertical ;
+  /* 设置盒子的行数 */
+  -webkit-line-clamp: 2;
+}

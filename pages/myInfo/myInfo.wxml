@@ -1,0 +1,36 @@
+<view class="myInfo">
+  <view class="header">
+  <view class="list">
+    <view class="left">头像</view>
+    <view class="right"><image src="/static/images/bg.png"></image></view>
+  </view>
+  <view class="list">
+    <view class="left">手机号</view>
+    <view class="right">{{userInfo.phone}}</view>
+  </view>
+  <view class="list" bindtap="nohid">
+    <view class="left">用户名</view>
+    <view class="right">{{userInfo.nickname}}</view>
+  </view>
+  </view>
+  <view class="header">
+    <view class="list">
+    <view class="left">UID</view>
+    <view class="right">{{userInfo.uid}}</view>
+    </view>
+    <view class="list"  bindtap="nohid2">
+    <view class="left">生日</view>
+    <view class="right">{{userInfo.birthday}}</view>
+    </view>
+  </view>
+  <!-- 修改用户名 -->
+  <view class="zhezhao {{ishidden?'hidden':''}}" bindtap="hid"></view>
+  <view class="change {{ishidden?'hidden':''}}">
+      <input type="text" placeholder="{{placeholder}}" value="{{newUserName}}" bindinput="changeValue"/>
+      <view class="btns">
+        <button type="primary" bindtap="hid">取消</button>
+        <button type="primary" bindtap="changInfo">确定</button>
+      </view>
+  </view>
+
+</view>

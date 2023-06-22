@@ -1,0 +1,6 @@
+<view class="header">
+    <text class="title">{{title}}</text>
+    <view class="more">
+      <text bindtap="toUrl">更多></text>
+    </view>
+</view>

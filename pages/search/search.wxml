@@ -1,0 +1,47 @@
+<view class="search">
+  <view class="searchInput">
+    <text class="iconfont icon-search"></text>
+    <input type="text" placeholder="请输入歌曲名称" value="{{inputText}}" bindinput="suggestMusic" bindconfirm="getMusic"/>
+  </view>
+    <view class="searchBefore {{state==0?'':'hidden'}}">
+      <!-- 历史记录 -->
+      <view class="history">
+      <view class="title">历史</view>
+      <view class="content">
+        <view class="historyItem" wx:for="{{history}}" wx:key="name" data-name="{{item}}" bindtap="clickName">{{item}}</view>
+      </view>
+    </view>
+    <!-- 排行榜 -->
+  <!-- 排行榜 -->
+  <view class="topList">
+      <header title="排行榜" />
+      <swiper class="top">
+        <swiper-item wx:for="{{topList}}" wx:key="id">
+          <view class="topName">{{item.name}}</view>
+          <view class="nameList">
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="track" data-id="{{track.id}}" wx:for-index="num" wx:key="id">
+            <text class="{{num<=2? 'redcolor':''}}">{{num+1}}</text>
+            <text class="musicName" bindtap="clickName" data-name="{{track.name}}">{{track.name}}</text>
+          </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="searching {{state==1?'':'hidden'}}">
+      <view class="suggestItem" wx:for="{{keywords}}" wx:key="keyword" bindtap="clickName" data-name="{{item.keyword}}">
+      {{item.keyword}}        
+      </view>
+  </view>
+  <view class="searchAfter {{state==2?'':'hidden'}}">
+    <view class="title">单曲</view>
+    <view class="searchItem" wx:for="{{songs}}" wx:key="id" data-id="{{item.id}}" bindtap="toMusic">
+      <view class="searchName">{{item.name}}</view>
+      <view class="searchInfo">
+      <text style="color:rgb(0,0,155)">{{item.artists[0].name}}</text>
+      <text>-{{item.album.name}}</text>
+      </view>
+    </view>
+  </view>
+  <musicControl></musicControl>
+</view>

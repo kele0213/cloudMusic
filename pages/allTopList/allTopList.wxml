@@ -1,0 +1,15 @@
+<view class="allTopList">
+  <scroll-view class="listView" scroll-x>
+    <view class="nav">
+      <view class="navItem {{listIndex == index ? 'bordercol':''}}" wx:for="{{listType}}" wx:key="tagId" bindtap="changeType" data-index="{{index}}" data-tagId="{{item.tagId}}">
+        {{item.tagName}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class="content">
+    <view class="song" wx:for="{{songs}}" wx:key="id" data-id="{{item.id}}" bindtap="toList">
+      <image src="{{item.cover}}" mode="widthFix"></image>
+      <view class="title">{{item.name}}</view>
+    </view>
+  </view>
+</view>

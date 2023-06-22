@@ -1,0 +1,8 @@
+@import "/static/iconfont/iconfont.wxss";
+::-webkit-scrollbar {
+  display: none;
+}
+.null {
+  /* 保持和控制器同高 */
+  height: 130rpx;
+}

@@ -1,0 +1,8 @@
+<view class="musicControl">
+  <view class="info" bindtap="pushToMusic">
+    <image src="{{musicInfo.picUrl}}"></image>
+  <text class="musicName">{{musicInfo.name || '暂无歌曲'}}</text>
+  <text class="singer">{{musicInfo.singer}}</text>
+  </view>
+  <text class="btn iconfont {{isPlay?'icon-zanting':'icon-bofang'}}" bindtap="changeState"></text>
+</view>

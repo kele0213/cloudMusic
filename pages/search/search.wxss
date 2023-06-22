@@ -1,0 +1,143 @@
+.searchInput{
+  display: flex;
+  background-color: #f00;
+  padding-bottom: 20rpx;
+  justify-content: center;
+}
+.searchInput input{
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  color:#dddddd;
+  font-size: 32rpx;
+}
+.iconfont {
+  padding-top: 10rpx;
+  padding-right: 20rpx;
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.history {
+  padding: 20rpx;
+  height: 180rpx;
+  overflow: hidden;
+}
+
+.history .title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.history .content{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.history .content .historyItem {
+  margin-top:20rpx;
+  margin-right: 20rpx;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border: 1px solid #888888;
+  border-radius: 40rpx;
+}
+
+
+.topList {
+  padding:0 25rpx;
+}
+
+.topList .top{
+  height: 800rpx;
+}
+
+.topList .nameList{
+  display: flex;
+  height: 750rpx;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.musicItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 15rpx 0;
+  width: 50%;
+}
+
+.topName {
+  font-size: 32rpx;
+  font-weight: 700;
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #dddddd;
+}
+
+.musicItem text{
+  margin-left: 30rpx;
+}
+.musicItem .singer{
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  color: #606266;
+}
+.musicItem .musicName{
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 设置对齐模式 */
+  -webkit-box-orient:vertical ;
+  /* 设置盒子的行数 */
+  -webkit-line-clamp: 1;
+}
+
+.musicItem .singer{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 设置对齐模式 */
+  -webkit-box-orient:vertical ;
+  /* 设置盒子的行数 */
+  -webkit-line-clamp: 1;
+}
+
+.redcolor {
+  color:#f00
+}
+
+.searching .suggestItem {
+  padding: 20rpx;
+  border-bottom: 1px solid #ddd;
+  font-size: 28rpx;
+}
+
+.searchAfter .title{
+  padding: 20rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
+}
+
+.searchAfter .searchItem {
+  padding: 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+.searchItem .searchName {
+  font-size: 28rpx;
+}
+.searchItem .searchInfo {
+  padding-top: 4rpx;
+  font-size: 24rpx;
+}
+.searchInfo text {
+  padding-right: 10rpx;
+}

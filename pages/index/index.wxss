@@ -1,0 +1,154 @@
+.container{
+  height: 100vh;
+}
+
+.header {
+  display:flex;
+}
+.header .search {
+  border: 1px solid #eee;
+  flex:1;
+  margin:10px 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 25px;
+  background-color: #F0F2F5;
+  color:#606266 ;
+}
+
+.bannerContainer{
+  margin:0 20rpx;
+}
+
+.banner{
+  border-radius: 15rpx;
+  overflow: hidden;
+  height: 300rpx;
+}
+
+.banner image {
+  height: 300rpx;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+}
+.nav .navItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 20rpx;
+}
+.nav .navItem .iconfont{
+  background-color: #f00;
+  width: 110rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  border-radius: 50%;
+  color:white;
+  font-size: 50rpx;
+}
+.nav .navItem .font{
+  padding-top: 5px;
+}
+
+.recommend {
+  padding: 25rpx;
+}
+
+.scrollView {
+  display: flex;
+  height: 320rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #C0C4CC;
+}
+.scrollItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 320rpx;
+  margin-top: 20rpx;
+  margin-right: 12rpx;
+}
+.scrollItem image{
+  width: 200rpx;
+  border-radius: 25rpx;
+}
+.scrollItem text{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 设置对齐模式 */
+  -webkit-box-orient:vertical ;
+  /* 设置盒子的行数 */
+  -webkit-line-clamp: 2;
+}
+
+.topList {
+  padding:0 25rpx;
+}
+
+.topList .top{
+  height: 500rpx;
+}
+
+.musicItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.topName {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.musicItem image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 30rpx;
+  min-width: 120rpx;
+}
+.musicItem text{
+  margin-left: 30rpx;
+}
+.musicItem .singer{
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  color: #606266;
+}
+.musicItem .musicName{
+  font-size: 35rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 设置对齐模式 */
+  -webkit-box-orient:vertical ;
+  /* 设置盒子的行数 */
+  -webkit-line-clamp: 1;
+}
+
+.musicItem .singer{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 设置对齐模式 */
+  -webkit-box-orient:vertical ;
+  /* 设置盒子的行数 */
+  -webkit-line-clamp: 1;
+}

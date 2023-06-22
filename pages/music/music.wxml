@@ -1,0 +1,75 @@
+<view class="musicContainer">
+<!-- 顶部返回 -->
+  <back />
+  <image class="background" src="{{musicInfo.picUrl}}" lazy-load/>
+  <!-- 标题 -->
+  <view class="title">
+    <text class="musicName">{{musicInfo.name}}</text>
+    <text class="singer">{{musicInfo.singer}}</text>
+  </view>
+  <!-- 唱片 -->
+  <image class="CDbtn  {{isPlay?'CDrotate':''}} {{isshowLyric?'hidden':''}}" src="/static/images/song/needle.png" lazy-load/>
+  <!-- 唱片的杆 -->
+    <!-- 唱片本体用swiper包住,实现滑动切歌 -->
+    <swiper class="discSwiper {{isshowLyric?'hidden':''}}">
+      <swiper-item class="discSwiperItem">
+        <view class="discContainer" bindtap="showLyric">
+          <image class="disc {{isPlay?'discAnimation':''}}" src="/static/images/song/disc.png" mode="" lazy-load/>
+          <image class="musicImg {{isPlay?'discAnimation':''}}" src="{{musicInfo.picUrl}}" mode="" lazy-load/>
+        </view>
+      </swiper-item>
+    </swiper>
+    <!-- 显示歌词 -->
+    <scroll-view class="lyric {{isshowLyric?'':'hidden'}}" enable-flex scroll-y scroll-into-view="l{{lyricIndex-4}}" bindtap="showLyric">
+      <view class="lyricItem {{lyricIndex==index+1 ? 'selectItem':''}} {{isshowLyric?'':'hidden'}}" wx:for="{{lyrics}}" wx:key="id" id="l{{index}}">
+        {{item[1]}}
+      </view>
+    </scroll-view>
+<view class="footer">
+        <!-- 喜欢、收藏、评论按钮 -->
+    <view class="buttonContainer">
+        <text class="iconfont icon-xihuan {{isLike?'red':''}}" bindtap="likeMusic"></text>
+        <text class="iconfont icon-tianjia"></text>
+        <text class="iconfont icon-pinglun" bindtap="toWrite"></text>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <text>{{currentTime}}</text>
+      <slider class="timeBar" block-size="12" activeColor="#da3f34" background-color="#dadada" value="{{barValue}}" bindchange="changeSlider"/>
+      <text>{{allTime}}</text>
+    </view>
+    <!-- 底部按钮 -->
+    <view class="musicControl">
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+        <text class="iconfont icon-shangyishou" bindtap="preMusic"></text>
+        <text class="iconfont  big {{isPlay?'icon-zanting':'icon-bofang'}}" bindtap="changeState"></text>
+        <text class="iconfont icon-next" bindtap="nextMusic"></text>
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList" bindtap="showList"></text>
+    </view>
+</view>
+<!-- 歌曲列表 -->
+<!-- 加个遮罩用来关闭列表 -->
+<view class="zhezhao {{ishiddenList?'hidden':''}}" bindtap="showList"></view>
+<view class="playingList {{ishiddenList?'':'playingListTran'}}">
+  <view class="listTitle">播放列表</view>
+  <scroll-view class="playingList-scroll" scroll-y>
+  <view class="listItem" wx:for="{{playingList}}" wx:key="id" data-id="{{item.id}}" bindtap="changeListMusic">
+    <view class="info">
+      <text class="musicName">{{item.name}}</text>
+      <text class="singer">{{item.ar[0].name}}</text>
+    </view>
+  </view>
+</scroll-view>
+</view>
+
+<!-- <scroll-view class="playingList {{ishiddenList?'':'playingListTran'}}" scroll-y>
+  <view class="listTitle">播放列表</view>
+  <view class="listItem" wx:for="{{playingList}}" wx:key="id" data-id="{{item.id}}" bindtap="changeListMusic">
+    <view class="info">
+      <text class="musicName">{{item.name}}</text>
+      <text class="singer">{{item.ar[0].name}}</text>
+    </view>
+  </view>
+</scroll-view> -->
+
+</view>

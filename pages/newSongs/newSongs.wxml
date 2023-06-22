@@ -1,0 +1,22 @@
+<back></back>
+<view class="newSongs">
+  <view class="title">
+    <view class="titleInfo">推荐新歌</view>
+    <view class="time">{{date}}</view>
+  </view>
+  <view class="content">
+    <view class="all">播放列表</view>
+    <view class="info" wx:for="{{newSongs}}" wx:key="id" data-id="{{item.id}}" bindtap="toMusic">
+      <view class="num">{{index+1}}</view>
+      <view class="songInfo">
+        <view class="musicName">{{item.name}}</view>
+      <view class="singer">{{item.song.artists[0].name}} - {{item.song.album.name}}</view>
+      </view>
+      <view class="btn">
+        <text class="iconfont icon-bofang"></text>
+      </view>
+    </view>
+  </view>
+  <musicControl></musicControl>
+  <view class="null"></view>
+</view>

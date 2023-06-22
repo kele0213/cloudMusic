@@ -1,0 +1,19 @@
+<back></back>
+<view class="login">
+  <view class="title">
+  <view class="msg hello">你好,</view>
+  <view class="msg">欢迎来到Cloud Music</view>
+  </view>
+  <view class="info">
+    <input type="text" placeholder="请输入账号" value="{{username}}" bindinput="changeUserName"/>
+    <input type="password" placeholder="请输入密码" value="{{password}}" bindinput="changePassWord"/>
+  </view>
+  <view class="loginbtn">
+    <button style="color: white; background-color: red; width: 90vw; border-radius: 100rpx;"
+    bindtap="loginUser">登录</button>
+    <view class="psw">
+      <view bindtap="toRegister">注册账号</view>
+      <view bindtap="toReset">重设密码</view>
+    </view>
+  </view>
+</view>

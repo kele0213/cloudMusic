@@ -1,0 +1,3 @@
+<view class="header" bindtap="goBack">
+  <text class="iconfont .icon-fanhui goBack {{black?'black':''}}" style="{{sty}}">  </text>
+</view>
