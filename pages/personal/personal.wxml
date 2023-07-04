@@ -15,7 +15,7 @@
       <image src="{{likeUrl?likeUrl:'/static/images/bg.png'}}"></image>
       <view class="likeInfo">
         <view class="title">我喜欢的音乐</view>
-        <view class="count">{{historyList?likeList.length:'0'}}首</view>
+        <view class="count">{{likeList?likeList.length:'0'}}首</view>
       </view>
     </view>
     <view class="like" bindtap="toHistory">

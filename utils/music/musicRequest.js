@@ -1,5 +1,6 @@
 let Address = 'https://www.codeman.ink/api'
-let localAddress = 'http://localhost:8080/music'
+// let localAddress = 'http://localhost:8080/music'
+let localAddress = 'http://192.168.123.144:8080/music'
 
 export default class MusicRequest {
   get(url,data={}){

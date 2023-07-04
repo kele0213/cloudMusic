@@ -18,7 +18,8 @@ Page({
   async onLoad(options) {
     backgroundAudio.pause()
     wx.setStorageSync('isPlay', false)
-    let mvs = await musicRequest.get("/mv/exclusive/rcmd")
+    // /top/mv  /mv/exclusive/rcmd
+    let mvs = await musicRequest.get("/top/mv")
     mvs = mvs.data
     let result = []
     for(let i=0;i<mvs.length;i++){

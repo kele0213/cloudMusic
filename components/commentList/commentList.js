@@ -87,9 +87,9 @@ Component({
         })
       }
       // 对时间进行处理
-      floorComment.ownerComment.time = moment(floorComment.ownerComment.time).format('yyyy年M月Do');
+      floorComment.ownerComment.time = moment(floorComment.ownerComment.time).format('yyyy-MM-DD');
       floorComment.comments.forEach(item => {
-        item.time = moment(item.time).format('yyyy年M月Do');
+        item.time = moment(item.time).format('yyyy-MM-DD');
       })
       this.setData({
         floorComment
@@ -115,7 +115,7 @@ Component({
       floorCommentTime = result[result.length - 1].time;
       // 处理时间
       result.forEach(item => {
-        item.time = moment(item.time).format('yyyy年M月Do');
+        item.time = moment(item.time).format('yyyy-MM-DD');
       })
       floorComment.comments.push(...result)
       this.setData({
@@ -143,7 +143,7 @@ Component({
       }
 
       commentData.data.comments.forEach(async item => {
-        item.time = moment(item.time).format('yyyy年M月Do');
+        item.time = moment(item.time).format('yyyy-MM-DD');
       })
       commentList.push(...commentData.data.comments)
       this.setData({

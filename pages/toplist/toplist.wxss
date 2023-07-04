@@ -67,6 +67,7 @@ page {
   opacity: 0.3;
 }
 .musicInfo {
+  width: 70%;
   margin-left: 50rpx;
 }
 
@@ -76,6 +77,8 @@ page {
   padding: 12rpx 0rpx;
 }
 .musicItem .num {
+  min-width: 40rpx;
+  text-align: center;
   font-size: 32rpx;
   padding-right: 10rpx;
   font-weight: 700;
